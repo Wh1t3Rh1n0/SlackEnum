@@ -1,3 +1,6 @@
+
+![SlackEnum logo](assets/logo-slackenum.png)  
+
 # SlackEnum
 
 A user enumeration tool for Slack.
