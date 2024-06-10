@@ -18,6 +18,16 @@ cd SlackEnum
 python3 -m pip install -r requirements.txt
 ```
 
+Create the `cookies_dir` and `http_requests_dir` folders defined in the settings at the top of `slackenum.py`. 
+
+By default, these are `slack_ids-cookiebro` and `slack_ids-burp` and can be created by running the commands below.
+
+```
+mkdir slack_ids-cookiebro
+
+mkdir slack_ids-burp
+```
+
 
 ## Basic usage
 
@@ -37,7 +47,7 @@ python3 slackenum.py <TARGET/TARGETS LIST> [--sanity]
 
 1. Create one or more Slack user accounts from which to execute user enumeration. (Referred to as "Slack identities" or "Slack IDs".) Multiple accounts (100 or more) are recommended to perform user enumeration at higher/useable speeds.
 2. Log into each user account you've created and join the users to the same Slack workspace.
-3. While logged into Slack, use the [CookieBro](https://addons.mozilla.org/en-US/firefox/addon/cookiebro/) browser extension to export your cookies in JSON format. Save the exported cookies to a file in the `slack_ids-cookiebro` folder included with this repository.
+3. While logged into Slack, use the [CookieBro](https://addons.mozilla.org/en-US/firefox/addon/cookiebro/) browser extension to export your cookies in JSON format. Save the exported cookies to a file in the `slack_ids-cookiebro` folder.
 4. Repeat steps 2 and 3 for every additional user account you want to use with SlackEnum.
 5. Edit the settings at the top of `slackenum.py`. At a minimum, you must change the `default_host` setting to the Slack subdomain of your workspace. 
  
